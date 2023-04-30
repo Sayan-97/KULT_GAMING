@@ -34,7 +34,7 @@ const ConnectModal = ({ show, setConnectModal, handleLogin }) => {
 
     return show ? ReactDOM.createPortal(
         <>
-            <div className='transparent-bg w-[100%] h-[100vh] absolute top-0 right-0 flex justify-center items-center z-50'>
+            <div className='transparent-bg w-[100%] h-[100vh] fixed top-0 right-0 flex justify-center items-center z-50'>
 
                 <div ref={modalRef} className='bg-accent w-[50%] p-6 rounded-custom space-y-4'>
                     <div className='w-full flex justify-end'>
