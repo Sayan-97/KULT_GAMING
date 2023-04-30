@@ -85,7 +85,7 @@ const Header = () => {
                             {({ open, close }) => (
                                 <>
                                     <Popover.Button
-                                        className={`${open ? '' : ''} flex items-center gap-4 bg-background h-full px-4 py-2 rounded-custom`}
+                                        className={`${open ? '' : ''} flex items-center gap-4 bg-background h-full px-2 py-2 rounded-custom`}
                                     >
                                         <img src={kultIcon} alt="img" />
                                         <span>0x2a..y12</span>
