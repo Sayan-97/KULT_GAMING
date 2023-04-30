@@ -103,7 +103,7 @@ const Header = () => {
                                         leaveFrom="opacity-100 translate-y-0"
                                         leaveTo="opacity-0 translate-y-1"
                                     >
-                                        <Popover.Panel className="absolute z-40 mt-5 w-screen min-w-[350px] max-w-max -translate-x-1/2 transform shadow-2xl">
+                                        <Popover.Panel className="absolute z-40 mt-5 w-screen min-w-[300px] max-w-max right-0 transform shadow-2xl">
                                             <div className='bg-[#120F2F] rounded-custom divide-y divide-[#3b3b3b] grid'>
                                                 {dropdown.map((item, index) => {
                                                     const Icon = item.icon
