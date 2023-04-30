@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== SCROLL BAR ===== */
+::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9070D6;
+    border-radius: 4px;
+    cursor: grab;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::selection {
+    color: black;
+    background-color: white;
+}
+
+body{
+    @apply bg-background text-white overflow-x-hidden text-base font-light font-Poppins min-h-screen z-0 relative
+}
+
+.glass-overlay{
+    background-color: rgba(4, 8, 26, 0.72);
+    opacity: 0.5;
+    @apply z-10 absolute top-0 left-0 w-[100vw] h-[100vh];
+}
+
+.container{
+    @apply w-11/12 lg:w-[80%] mx-auto z-40;
+}
+
+a{
+    @apply text-base text-gray-200 md:text-lg
+}
+
+button{
+    @apply text-base font-medium
+}
+
+.transparent-bg{
+    background: rgba(0, 0, 0, 0.73);
+}
+
+h3{
+    @apply text-3xl font-semibold font-Clash
+}
