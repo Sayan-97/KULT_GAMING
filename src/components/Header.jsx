@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, useEffect, useRef, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/svg/kult-logo.svg'
 import kultIcon from '../assets/svg/kult-icon.svg'
@@ -67,11 +67,49 @@ const Header = () => {
         { icon: IoExitOutline, name: 'Disconnect', link: '/' },
     ]
 
+    const [showNav, setShowNav] = useState(true)
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [color, setColor] = useState(false)
+
+    const handleScroll = () => {
+        const currentScrollPos = window.pageYOffset;
+        const header = document.querySelector("header");
+        const headerHeight = header.offsetHeight;
+        if (currentScrollPos > lastScrollTop && currentScrollPos > headerHeight) {
+            setShowNav(false);
+        } else {
+            setShowNav(true);
+        }
+
+        setLastScrollTop(currentScrollPos <= 0 ? 0 : currentScrollPos);
+
+        if (currentScrollPos > headerHeight) {
+            setColor(true);
+        } else {
+            setColor(false);
+        }
+    };
+
+    useEffect(() => {
+        // Check navbar color on initial load
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetTop;
+        if (window.pageYOffset > headerHeight) {
+            setColor(true);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollTop]);
+
     return (
-        <header className='sticky py-10 z-50'>
+        <header  className={`fixed w-full ${showNav ? 'top-0' : `top-[-100%]`} ${color ? 'navbar' : ''} py-8 z-50 transition-all duration-700 ease-in-out`} style={{ transitionProperty: 'top' }}>
             <nav className='container flex items-centern justify-between'>
-                <img src={Logo} alt="img" />
-                <ul className='flex items-center justify-between w-[45%]'>
+                <img src={Logo} alt="img" className='max-md::w-40'/>
+                <ul className='max-lg:hidden flex items-center justify-between w-[45%]'>
                     {links.map((item, index) => {
                         return (
                             <Link onClick={() => setActive(item.title)} key={index} to={item.link} className={`hover:text-white ${item.title === active ? 'text-white transform scale-105' : ''}`}>{item.title}</Link>

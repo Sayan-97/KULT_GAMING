@@ -16,8 +16,8 @@ import swiperImg1 from '../../../assets/img/SwiperHead.png'
 
 const Trending = () => {
     return (
-        <div className='relative'>
-            <div className='container relative space-y-4'>
+        <section className='relative'>
+            <div className='container relative space-y-8'>
                 <h3>What’s Hot</h3>
 
                 <Swiper
@@ -32,7 +32,11 @@ const Trending = () => {
                     // pagination={{ clickable: true, el: ".swiper-pagination" }}
                     spaceBetween={40}
                     // className='mySwiper'
-                    pagination={{ clickable: true }}
+                    pagination={{
+                        
+                        clickable: true,
+                        
+                    }}
                 >
                     <SwiperSlide>
                         <div className='relative rounded-xl'>
@@ -84,7 +88,7 @@ const Trending = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-        </div>
+        </section>
     )
 }
 

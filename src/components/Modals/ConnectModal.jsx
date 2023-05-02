@@ -36,7 +36,7 @@ const ConnectModal = ({ show, setConnectModal, handleLogin }) => {
         <>
             <div className='transparent-bg w-[100%] h-[100vh] fixed top-0 right-0 flex justify-center items-center z-50'>
 
-                <div ref={modalRef} className='bg-accent w-[50%] p-6 rounded-custom space-y-4'>
+                <div ref={modalRef} className='bg-accent lg:w-[50%] p-6 rounded-custom space-y-4'>
                     <div className='w-full flex justify-end'>
                         <AiOutlineClose className={`cursor-pointer`} onClick={setConnectModal} />
                     </div>
@@ -49,7 +49,7 @@ const ConnectModal = ({ show, setConnectModal, handleLogin }) => {
                     <div className='border border-gray-700 rounded-custom divide-y divide-gray-700'>
                         {connects.map((item, index) => {
                             return(
-                                <div key={index} className='p-4 flex items-center justify-between'>
+                                <div key={index} className='p-4 flex max-md:flex-col max-md:gap-4 md:items-center justify-between'>
                                     <div className='flex items-center gap-3'>
                                         <img src={item.logo} alt="img" />
                                         <p className='text-lg'>{item.name}</p>

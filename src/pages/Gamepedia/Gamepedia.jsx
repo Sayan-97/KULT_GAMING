@@ -1,10 +1,13 @@
 import React from 'react'
-import { Trending } from './components'
+import { FreeToPlay, PartneredGames, RecentlyAdded, Trending } from './components'
 
 const Gamepedia = () => {
     return (
-        <div>
+        <div className='py-8'>
             <Trending />
+            <RecentlyAdded />
+            <FreeToPlay />
+            <PartneredGames />
         </div>
     )
 }

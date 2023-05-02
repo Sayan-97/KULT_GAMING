@@ -9,14 +9,16 @@ const Marketplace = () => {
     )
 
     return (
-        <div className='container relative'>
-            <button onClick={setCreateModal} className='bg-bgBtn px-5 py-2 rounded-custom'>Create Collection</button>
+        <section>
+            <div className='container relative'>
+                <button onClick={setCreateModal} className='bg-bgBtn px-5 py-2 rounded-custom'>Create Collection</button>
 
-            <CreateCollectionModal 
-                show={show}
-                setCreateModal={setCreateModal}
-            />
-        </div>
+                <CreateCollectionModal
+                    show={show}
+                    setCreateModal={setCreateModal}
+                />
+            </div>
+        </section>
     )
 }
 

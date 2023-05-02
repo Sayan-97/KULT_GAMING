@@ -1,3 +1,4 @@
+/* Font Family (Poppins) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -8,7 +9,6 @@
 ::-webkit-scrollbar {
     width: 5px;
     background: transparent;
-
 }
 
 ::-webkit-scrollbar-thumb {
@@ -21,10 +21,14 @@
     background: transparent;
 }
 
+
+/* TEXT SELECT */
 ::selection {
     color: black;
     background-color: white;
 }
+
+/* CUSTOM STYLES */
 
 body{
     @apply bg-background text-white overflow-x-hidden text-base font-light font-Poppins min-h-screen z-0 relative
@@ -33,7 +37,11 @@ body{
 .glass-overlay{
     background-color: rgba(4, 8, 26, 0.72);
     opacity: 0.5;
-    @apply z-10 absolute top-0 left-0 w-[100vw] h-[100vh];
+    @apply z-10 absolute top-0 left-0 w-[100vw] h-[100%];
+}
+
+section{
+    @apply w-[100%] min-h-screen flex items-center justify-center;
 }
 
 .container{
@@ -52,6 +60,36 @@ button{
     background: rgba(0, 0, 0, 0.73);
 }
 
+h1{
+    @apply text-5xl md:text-7xl font-bold font-Clash
+}
+
+h2{
+    @apply text-5xl font-semibold font-Clash
+}
+
 h3{
-    @apply text-3xl font-semibold font-Clash
+    @apply text-4xl font-semibold font-Clash
+}
+
+button{
+    @apply bg-bgBtn rounded-custom
+}
+
+.btn-secondary {
+    background-image: url('./assets/gradient/Rectangle.png');
+    background-size: cover;
+}
+
+.navbar{
+    background: rgba(63, 14, 174, 0.29);
+    backdrop-filter: blur(7.5px);
+}
+
+.swiper-pagination-bullet{
+    @apply bg-white
+}
+
+.swiper-pagination-bullet-active{
+    @apply !bg-secondary
 }

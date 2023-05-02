@@ -1,10 +1,12 @@
 import React from 'react'
-import { Hero } from './components'
+import { ExploreNFTMarketplace, Hero, KultOffers } from './components'
 
 const Home = () => {
     return (
-        <div>
+        <div className='space-y-10'>
             <Hero />
+            <KultOffers />
+            <ExploreNFTMarketplace />
         </div>
     )
 }

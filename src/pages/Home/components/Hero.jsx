@@ -5,22 +5,21 @@ import Lines from '../../../assets/gradient/lines.png'
 
 const Hero = () => {
     return (
-        <div className='relative'>
-            <img src={Mtns} alt="img" className='absolute w-full top-[29%] z-[-2]' />
-            <img src={Gradient} alt="img" className='absolute top-[-15%] right-[50%] translate-x-[50%] z-[-1] object-cover w-[70%]'/>
-            <img src={Lines} alt="img" className='absolute top-[50%] w-full h-[130%] z-[-3]'/>
-            <div className='container relative py-20 flex flex-col items-center justify-center gap-6'>
-                <span style={{ color: 'rgba(255, 255, 255, 0.66)' }} className='uppercase text-xl font-semibold' >Welcome to Kult</span>
-                <h1 className='text-7xl leading-tight text-center font-bold font-Clash'>The Future Of<br /> Gaming</h1>
-                <p className='text-lg text-center'>KULT is a dedicated gaming launchpad & IGO platform. We bring to you a platform projects<br />
+        <section className='relative'>
+            <img src={Mtns} alt="img" className='max-md:hidden block absolute w-full top-[35%] z-[-2]' />
+            <img src={Gradient} alt="img" className='absolute top-[10%] lg:top-[6%] right-[50%] translate-x-[50%] z-[-1] object-cover lg:w-[70%]'/>
+            <img src={Lines} alt="img" className='max-md:hidden block absolute top-[50%] w-full h-[95%] z-[-3]'/>
+            <div className='container relative flex flex-col items-center justify-center gap-6'>
+                <span style={{ color: 'rgba(255, 255, 255, 0.66)' }} className='uppercase text-xl font-medium' >Welcome to Kult</span>
+                <h1 className='leading-tight text-center'>The Future Of<br /> Gaming</h1>
+                <p className='md:text-lg text-center'>KULT is a dedicated gaming launchpad & IGO platform. We bring to you a platform projects<br />
                     can use to maximize their project's scope.</p>
                 <div className='space-x-5'>
-                    <button className='px-6 py-3 bg-bgBtn rounded-custom'>Discover</button>
-                    <button>Discover</button>
-                    
+                    <button className='px-11 py-4'>Discover</button>
+                    <button className='btn-secondary px-8 py-4'>Watch Now</button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
