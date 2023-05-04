@@ -45,7 +45,7 @@ section{
 }
 
 .container{
-    @apply w-11/12 lg:w-[80%] mx-auto z-40;
+    @apply w-11/12 lg:w-[80%] 3xl:w-[65%] mx-auto z-40;
 }
 
 a{

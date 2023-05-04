@@ -35,6 +35,10 @@ export default {
       // Border Radius
       borderRadius: {
         custom: '6px'
+      },
+
+      screens:{
+        '3xl': '1550px' 
       }
     },
   },
