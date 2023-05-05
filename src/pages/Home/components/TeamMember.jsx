@@ -1,9 +1,9 @@
 import React from 'react'
 import TeamemberImg1 from '../../../assets/img/Team-member1.jpg'
-import TeamemberImg2 from '../../../assets/img/Team-member1.jpg'
+import TeamemberImg2 from '../../../assets/img/Team-member4.jpg'
 import TeamemberImg3 from '../../../assets/img/Team-member3.jpg'
-import TeamemberImg4 from '../../../assets/img/Team-member4.jpg'
-import TeamemberImg5 from '../../../assets/img/Team-member5.jpg'
+import TeamemberImg4 from '../../../assets/img/Team-member5.jpg'
+import TeamemberImg5 from '../../../assets/img/Team-member2.jpg'
 import TeamemberImg6 from '../../../assets/img/Team-member6.jpg'
 
 
