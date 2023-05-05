@@ -5,6 +5,8 @@ import UpcomingIGO from "./UpcomingIGO";
 import TopArtist from "./TopArtist";
 import TopCollection from "./TopCollection";
 import KultIgo from "./KultIgo";
+import JoinKult from "./JoinKult";
+import TeamMember from "./TeamMember";
 
 export {
     Hero,
@@ -13,5 +15,7 @@ export {
     UpcomingIGO,
     TopArtist,
     TopCollection,
-    KultIgo  
+    KultIgo,
+    JoinKult,
+    TeamMember
 }

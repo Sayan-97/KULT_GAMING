@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExploreNFTMarketplace, Hero, KultOffers, UpcomingIGO,TopArtist, TopCollection, KultIgo } from './components'
+import { ExploreNFTMarketplace, Hero, KultOffers, UpcomingIGO,TopArtist, TopCollection, KultIgo, JoinKult, TeamMember } from './components'
 // import TopArtist from './components/TopArtist'
 
 const Home = () => {
@@ -12,6 +12,8 @@ const Home = () => {
             <TopArtist/>
             <TopCollection/>
             <KultIgo/>
+            <JoinKult/>
+            <TeamMember/>
         </div>
     )
 }
